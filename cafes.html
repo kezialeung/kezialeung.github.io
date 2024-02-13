@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Kezpezfood Website</title>
+    <meta name="description" content="Looking for the hottest and best cafe in LA? There is a cafe for everyone so check out this list for the BEST cafes in LA!">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<style>
+     /* color scheme: */
+    /* red: #FF5454 */
+    #header{
+    background-color: #FF8731;
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    /* display:flex; */
+    position: relative;
+    line-height: 30px;
+    width: auto;
+    height: auto;
+    color: white;
+    margin: 0px;
+    margin-bottom: 20px;
+    padding-bottom: 80px;
+
+    
+    
+}
+   
+
+    ul.checkbox-list {
+        list-style: none;
+        padding: 0; 
+        margin: 10px; 
+        
+}
+#delete{
+    color: red;
+    background-color: white;
+}
+
+.todo-remove {
+			cursor: pointer;
+			color: #CCC;
+		}
+		.todo-remove:hover {
+			color: #dc3545;
+		}
+		.todo-remove:active {
+			color: #ba1323;
+		}
+#add_btn{
+    background-color:#FF8731;
+    border-color: #FF8731;
+    width: 100%;
+    margin-top: 15px;
+    margin-bottom: 30px;
+}
+.remove {
+    background-color: red;
+    border: red;
+    height: 3px;
+    
+}
+
+
+    </style>
+</head>
+<body>
+
+    <div id="logo" class="row">
+        <div id="top"></div>
+        <h2 class="p-3 col-12 text-center">KEZPEZFOOD</h2>
+</div>
+
+<div class="topnav">
+    <!-- <a href="#home" id="logo" class="active bold">KEZPEZFOOD</a> -->
+    <!-- Navigation links (hidden by default) -->
+    <div id="myLinks">
+        <a href="home_page.html">home</a>
+        <a href="LA_pagination.php">los angeles</a>
+        <a href="korean.html">korean food</a>
+        <a href="cafes.html">cafes</a>
+    </div>
+
+    <!-- "Hamburger menu" / "Bar icon" to toggle the navigation links -->
+    <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+      <i class="fa fa-bars"></i>
+    </a>
+  </div>
+
+
+
+<div id="header" class="container-fluid">
+    <div class="row">
+        <div id="top"></div>
+        <h2 class="p-3 col-12">choose a category</h2>
+        <div class="word_slider">
+            <div class="left_header_word outlined-text" href="korean.html">KOREAN</div>
+            <div class="center_header_word" href="cafes.html">COFFEE</div>
+            <div class="right_header_word outlined-text" href="home_page.html">KEZPEZFOOD</div>
+        </div><!-- text slider -->
+    </div>
+</div>
+
+<!-- intro -->
+<div id="page-wrapper">
+    <div class="row mt-4 ml-3">
+        <h2 class="col-12">Cafes I want to visit!</h2>
+        <div class="col-12 mt-4">
+            <form id="cafe-checklist">
+                <div class="form-row">
+                    <div class="col-12 col-sm-8 col-lg-10">
+                        <label for="list-item" class="sr-only">Cafe Name</label>
+                        <input type="text" class="form-control" id="list-item" placeholder="Cafe Name...">
+                        <small id="activity-error" class="form-text text-danger"></small>
+                        <label for="option-link" class="sr-only">Optional link</label>
+                        <input type="text" class="form-control" id="option-link" placeholder="Optional* Cafe link">
+                        <small class="form-text text-warning">* Optional</small>
+                    </div> <!-- .col -->
+                     
+                    <div class="col-12 col-sm-8 col-lg-10">
+                            <button role="button" type="submit" class="btn btn-primary" id="add_btn">Add</button>
+                        </div> <!-- .col -->
+                </div> <!-- form row end -->
+            </form>
+        </div><!-- .col -->
+    </div><!-- row end -->
+
+
+    
+    <div class="row ml-3">
+        <div class="col-12 col-sm-10 mt-3">
+
+            <button id="delete" class="btn mb-3">x Delete All</button>
+
+            <ul id="cafe-list" class="list-group">
+                
+                <li class="list-group-item d-flex justify-content-between">
+                    <div class="todo-check">
+                        <input type="checkbox" id="memory-look">
+                        <label for="memory-look"></label>
+                    </div>
+                    <div class="list-item">Memory Look</div>
+                    <div class="option-link"><a href="https://www.instagram.com/_memorylook/?hl=en">Instagram</a></div>
+                    <!-- <div class="list-item">https://www.instagram.com/_memorylook/?hl=en</div> -->
+                    <div class="todo-info">
+                        <button class="remove" title="Remove"></button>
+                    </div>
+                </li>
+                
+                <li class="list-group-item d-flex justify-content-between">
+                    <div class="todo-check">
+                        <input type="checkbox" id="Alchemist">
+                        <label for="Alchemist"></label>
+                    </div>
+                    <div class="list-item">Alchemist Coffee Project</div>
+                    <div class="option-link"><a href="https://www.yelp.com/biz/alchemist-coffee-project-los-angeles-2">yelp</a></div>
+                    <!-- <div class="list-item">https://www.yelp.com/biz/alchemist-coffee-project-los-angeles-2</div> -->
+                    <div class="todo-info">
+                        <button class="remove" title="Remove"></button>
+                    </div>
+                </li>
+                
+                <li class="list-group-item d-flex justify-content-between">
+                    <div class="todo-check">
+                        <input type="checkbox" id="6xs">
+                        <label for="6xs"></label>
+                    </div>
+                    <div class="list-item">6xsCoffee</div>
+                    <div class="option-link"><a href="https://6ixthsensela.com/pages/6xs-coffee">website</a></div>
+                    <!-- <div class="list-item">https://6ixthsensela.com/pages/6xs-coffee</div> -->
+                    <div class="todo-info">
+                        <button class="remove" title="Remove"></button>
+                    </div>
+                </li>
+                
+
+            </ul>
+
+        </div> <!-- .col -->
+    </div> <!-- .row -->
+
+    
+</div><!--page wrapper-->
+<div id="footer" class="container-fluid">
+    <p>Kezia Leung's Interest and Hobbies</p>
+    <p>Socials: @kezpezfood</p>
+</div><!-- footer -->
+
+   
+<!-- SCRIPT -->
+    <script>
+        
+function myFunction() {
+  var x = document.getElementById("myLinks");
+  if (x.style.display === "block") {
+    x.style.display = "none";
+  } else {
+    x.style.display = "block";
+  }
+}
+
+document.querySelector("#delete").onclick = () => {
+			document.querySelector("#cafe-list").innerHTML = ''
+		}
+document.querySelector("#cafe-checklist").onsubmit = () => {
+			let divBody = document.querySelector("#cafe-list");
+			const inputValue = document.querySelector("#list-item").value.trim()
+			let urlLink = document.querySelector("#option-link").value.trim()
+			let validForm = true
+			
+
+
+			if (inputValue.length == 0) {
+        		validForm = false;
+        		document.querySelector("#activity-error").innerHTML = "Cafe name cannot be empty";
+    		} else {
+       			document.querySelector("#activity-error").innerHTML = "";
+   			 }
+
+    		if (inputValue.length > 0) {
+        // Check if the input value is already in the addedActivities array
+        // if (addedActivities.includes(inputValue)) {
+        //     alert(inputValue + " is already on the list.");
+        //     return false; // Terminate the function
+        // }
+		
+		// Add the input value to the addedActivities array
+
+		const listItems2 = document.querySelectorAll("#cafe-list div");
+
+		
+const li = document.createElement("li")
+                const divCheck = document.createElement("div")
+				const divItem = document.createElement("div")
+				const divInfo = document.createElement("div")
+				const linkURL = document.createElement("href")
+				const btnRemove = document.createElement("btn")
+
+				// structure the elements and add to DOM
+                li.appendChild(divCheck)
+				li.appendChild(divItem)
+				li.appendChild(linkURL)
+				li.appendChild(divInfo)
+				divInfo.appendChild(btnRemove)
+				document.querySelector("#cafe-list").appendChild(li)
+
+                
+				divItem.innerHTML = inputValue
+				linkURL.src = urlLink;
+                divCheck.title = "Check"
+				btnRemove.title = "Remove"
+
+				// add classes
+				li.classList.add("list-group-item", "d-flex", "justify-content-between")
+                divCheck.classList.add("todo-check")
+                divItem.classList.add("list-item")
+				linkURL.classList.add("option-link")
+				divInfo.classList.add("todo-info")
+				btnRemove.classList.add("remove")
+
+				
+
+				//where we append to our list
+				divBody.append(li);
+
+				bindRemoveBtns()
+
+				// clear input field
+				document.querySelector("#list-item").value = ''
+				document.querySelector("#option-link").value = '';
+
+			}
+
+			return false
+		}
+
+		const bindRemoveBtns=function() {
+			const buttons = document.querySelectorAll(".remove")
+
+			for (btn of buttons) {
+				btn.onclick = function() {
+					// console.log(this.parentElement.parentElement)
+					this.parentElement.parentElement.remove()
+				}
+			}
+		}
+
+		bindRemoveBtns()
+		
+    </script>
+</body>
+</html>

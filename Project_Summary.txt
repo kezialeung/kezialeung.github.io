@@ -1,0 +1,13 @@
+Project Summary Document
+1. Topic and Purpose: The topic is a food restaurant reccomendation website. The Purpose is to share y favorite restaurants with people on the internet. I currently have a food blog on Instagram but I've been always wanting to make a website to host all the information. This way, my followers don't need to scroll through all my content but can quickly view it on a website. 
+2. The website is public and there is no login. This way anybody is able to access my reccomendations. 
+First you enter the home page and I list out my favorite restaurants in LA and welcome you in. Then you can click the other tabs. The tab that says Los Angeles allows you to search any restaurant in my database. The Korean food tab shows you all my favorite korean restaurants inn LA. The cafes tab allows you to add cafes that are on your list. 
+3. Explain the source of my data: I created my database manually. I added in restaurants manually and all the information. All the data is my personal data. 
+4. Database Diagram- added in the folder called ERR diagram
+5. Describe extras used.
+    The project extras I used is 1. responsive web design, 2. Pagination, 3. Frontend-Backend AJAX, SQL Aggregate Function
+    I used the responsive web design throughout the whole website. Pagination is used in the Los Angeles page, AJAX is also used in the Los Angeles page because it connects to the backend database, SQL Aggregate is used on the Los Angeles page too to connect to the database. 
+6. Describe CSS frameworks or templates used. Provide links to original files.
+    The CSS frameworks I used were Bootstrap. The lib folder is also CSS templates used from one of the lectures. 
+All the other CSS and HTML is original layout. The config is not within a seperate folder because the codes were not connecting. 
+I did this: require '../config/config.php'; and it wouldn't connect to the config folder. Therefore, I just left the config because otherwise it wouldn't work. 

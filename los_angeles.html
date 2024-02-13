@@ -1,0 +1,239 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Kezpezfood Website</title>
+    <meta name="description" content="Kezpezfood tells you the best restaurants in LA but I also have so many on my list I haven't tried yet. Check out this database to of food spots I haven't tried yet but really want to. ">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<style>
+        
+     /* color scheme: */
+     #header{
+    background-color: #8C31FF;
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    /* display:flex; */
+    position: relative;
+    line-height: 30px;
+    width: auto;
+    height: auto;
+    color: white;
+    margin: 0px;
+    margin-bottom: 20px;
+    padding-bottom: 80px;
+
+    
+    
+}
+   
+
+    ul.checkbox-list {
+        list-style: none;
+        padding: 0; 
+        margin: 10px; 
+}
+/* desktop
+<div class="favs">
+<div class="section-image">
+    <h2>Favorite Cafe</h2>
+    
+    <div class="container">
+        <img src="https://t4.ftcdn.net/jpg/04/64/09/51/360_F_464095112_OyKQnyAqdthjjHhf5pZdAoZyHQPa70xt.jpg" alt="USC Village">
+        <div class="overlay"></div>
+        <a href="">Read More</a>
+    </div> <!-- .container -->
+</div><!--restaurant-section-->
+</div> <!-- .favs-->
+ */
+ /* <ul id="nav">
+    <li id="logo"><a href="home_page.html">KEZPEZFOOD</a></li>
+    <li><a href="home.html">home</a></li>
+    <ul>
+        <li><a href="los_angeles.html">los angeles</a></li>
+        <li><a href="korean.html">korean food</a></li>
+        <li><a href="cafes.html">cafes</a></li>
+    </ul>
+<li><a href="favs.html">my favs</a></li>
+</ul> */
+
+    </style>
+</head>
+<body>
+    <div id="logo" class="row">
+        <div id="top"></div>
+        <h2 class="p-3 col-12 text-center">KEZPEZFOOD</h2>
+</div>
+
+<!-- navigation bar -->
+<div class="topnav">
+    <!-- <a href="#home" id="logo" class="active bold">KEZPEZFOOD</a> -->
+    <!-- Navigation links (hidden by default) -->
+    <div id="myLinks">
+        <a href="home_page.html">home</a>
+        <a href="LA_pagination.php">los angeles</a>
+        <a href="korean.html">korean food</a>
+        <a href="cafes.html">cafes</a>
+    </div>
+
+    <!-- "Hamburger menu" / "Bar icon" to toggle the navigation links -->
+    <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+      <i class="fa fa-bars"></i>
+    </a>
+  </div>
+
+
+
+<div id="header" class="container-fluid">
+    <div class="row">
+        <div id="top"></div>
+        <h2 class="p-3 col-12 text-center">choose a category</h2>
+        <div class="word_slider">
+            <div class="left_header_word outlined-text" href="home_page.html">KEZPEZFOOD</div>
+            <div class="center_header_word" href="los_angeles.html">LOS ANGELES</div>
+            <div class="right_header_word outlined-text" href="korean.html">Korean</div>
+        </div><!-- text slider -->
+    </div>
+</div>
+
+<!-- intro -->
+    <div class="container">
+    <div class="row">
+        <h1 class="col-12 mt-4">Search a LA restaurant</h1>
+    </div> <!-- .row -->
+
+    <!-- <div class="row"> -->
+        <form class="col-12" id="search-form">
+            <div class="form-row">
+                <!-- <div class="col-12 mt-4 col-sm-6 col-lg-4">
+                    <label for="search-term" class="sr-only">Search:</label>
+                    <input type="text" class="form-control" id="search-term" placeholder="Search...">
+                </div> -->
+                <label for="restaurant-id" class="col-12 mt-4 col-sm-6 col-lg-4 col-form-label text-sm-left">Restaurant Name:</label>
+				<div class="col-sm-9">
+					<input type="text" class="form-control" id="restaurant-id" name="restaurant_name">
+				</div>
+			</div> <!-- .form-group -->
+            <div class="form-group row">
+                <label for="cuisine-id" class="col-12 mt-4 col-sm-6 col-lg-4 col-form-label text-sm-left">Cuisine:</label>
+                <!-- <div class="col-12 mt-4 col-sm-4 col-md-3 col-lg-2"> -->
+                    <div class="col-sm-9">
+                        <select name="cuisine_id" id="cuisine-id" class="form-control">
+                            <option value="" selected>-- All --</option>
+                            <option value="1">Cafes</option>
+                        <option value="2">Boba</option>
+                        <option value="3">Chinese</option>
+                        <option value="4">Korean</option>
+                    </select>
+                </div>
+            </div> <!-- .form-group -->
+            <div class="form-group row">
+				<div class="col-sm-3"></div>
+				<div class="col-sm-9 mt-2">
+					<button type="submit" class="btn btn-primary">Search</button>
+					<button type="reset" class="btn btn-light">Reset</button>
+				</div>
+			</div> <!-- .form-group -->
+		</form>
+	</div> <!-- .container -->
+
+
+
+	<div class="container">
+		<div class="row">
+			<h2 class="col-12 my-4">Search Results</h2>
+		</div> <!-- .row -->
+
+		<div class="row">
+			<div class="col-12">
+				<table class="table table-hover table-responsive mt-4">
+					<thead>
+						<tr>
+							<th>Restaurants</th>
+							<th>Cuisine/Category</th>
+						</tr>
+					</thead>
+
+					<tbody>
+						<tr>
+							<td>For Those About To Rock (We Salute You)</td>
+							<td>Rock</td>
+						</tr>
+					</tbody>
+				</table>
+
+			</div> <!-- .col -->
+		</div> <!-- .row -->
+	</div> <!-- .container -->
+</div><!--page wrapper-->
+
+<div id="footer" class="container-fluid">
+    <p>Kezia Leung's Interest and Hobbies</p>
+    <p>Socials: @kezpezfood</p>
+</div><!-- footer -->
+
+
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+
+   
+<!-- SCRIPT -->
+    <script>
+/* Toggle between showing and hiding the navigation menu links when the user clicks on the hamburger menu / bar icon */
+function myFunction() {
+  var x = document.getElementById("myLinks");
+  if (x.style.display === "block") {
+    x.style.display = "none";
+  } else {
+    x.style.display = "block";
+  }
+}
+
+document.querySelector("#search-form").onsubmit = function () {
+			const restaurant_name = document.querySelector("#restaurant-id").value.trim();
+			const cuisine_id = document.querySelector("#cuisine-id").value.trim();
+
+			const url = 'search.php?restaurant_name=' + restaurant_name + '&cuisine_id=' + cuisine_id;
+            
+			$.ajax({
+				url: url,
+				dataType: 'json',
+				success: function(response) {
+					console.log(response);
+
+					document.querySelector("tbody").innerHTML = '';
+
+					for (let i = 0; i < response.length; i++) {
+						displayRow(response[i].restaurant, response[i].cuisine);
+					}
+				},
+				error: function(e) {
+					alert("AJAX error");
+					console.log(e);
+				},
+			});
+
+			return false;
+		}
+
+
+		function displayRow(restaurant, cuisine) {
+			var tr = document.createElement('tr');
+			var tdRestaurant = document.createElement('td');
+			var tdCuisine = document.createElement('td');
+
+			tdRestaurant.innerHTML = restaurant;
+			tdCuisine.innerHTML = cuisine;
+
+			tr.appendChild(tdRestaurant);
+			tr.appendChild(tdCuisine);
+
+			document.querySelector('tbody').appendChild(tr);
+		}
+        
+    </script>
+</body>
+</html>

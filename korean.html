@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Kezpezfood Website</title>
+    <meta name="description" content="Driving around ktown LA and don't know where to eat? There are so many amazing Korean restaurants but here are my favorites!">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<style>
+     /* color scheme: */
+     #header{
+    background-color: #0600c2;
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    /* display:flex; */
+    position: relative;
+    line-height: 30px;
+    width: auto;
+    height: auto;
+    color: white;
+    margin: 0px;
+    margin-bottom: 20px;
+    padding-bottom: 80px;
+
+    
+    
+}
+   #page-wrapper{
+    margin:0px;
+   }
+
+    ul.checkbox-list {
+        list-style: none;
+        padding: 0; 
+        margin: 10px; 
+}
+
+.restaurant_image{
+        display: block;
+        width: 100%;
+        height: 100%;
+        /* float: left; */
+        object-fit: cover;
+        margin: 0px;
+      
+    
+}
+
+
+.restaurant_image .text{
+    text-align: justify; 
+    
+ }     
+
+ hr {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  border: 0;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+#top {
+  margin-top: 4rem;
+  margin-bottom: 1rem;
+  border: 0;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+#bottom {
+  margin-top: 1rem;
+  margin-bottom: 4rem;
+  border: 0;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+#best{
+    text-align: center;
+}
+
+.category{
+    text-align: center;
+}
+
+#comfort-food{
+    margin-top: 40px;
+}
+
+.name{
+    margin-top: 40px;
+}
+
+@media (min-width: 576px) { 
+    .restaurant_image {
+        float: left;
+        margin: 0 20px 20px 0;
+        width: 350px;
+        height: auto;
+      }
+
+      .restaurant_image .text {
+        width: calc(100% - 300px); /* Adjust the width based on the image width and margin */
+      }
+    
+      .fav{
+        text-align: center;
+      }
+      .stretch-image-container{
+        margin: 20px;
+      }
+
+    }
+    /* Medium devices (tablets, 768px and up) */
+    @media (min-width: 768) {
+      .restaurant_image {
+        float: left;
+        margin: 10px;
+        width: 350px;
+        height: auto;
+        
+      }
+
+      .restaurant_image .text {
+        width: calc(100% - 300px); /* Adjust the width based on the image width and margin */
+      }
+      .fav{
+        text-align: center;
+      }
+      .stretch-image-container{
+        margin: 20px;
+      }
+    }
+    /* Large devices (desktops, 99
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+    .restaurant_image {
+        float: left;
+        margin: 0 20px 20px 0;
+        width: 350px;
+        height: auto;
+      }
+
+      .restaurant_image .text {
+        width: calc(100% - 300px); /* Adjust the width based on the image width and margin */
+      }
+    
+      .fav{
+        text-align: center;
+      }
+      .stretch-image-container{
+        margin: 20px;
+      }
+
+}
+
+
+
+
+    </style>
+</head>
+<body>
+    <div id="logo" class="row">
+        <div id="top"></div>
+        <h2 class="p-3 col-12 text-center">KEZPEZFOOD</h2>
+</div>
+
+<!-- navigation bar -->
+<div class="topnav">
+    <!-- <a href="#home" id="logo" class="active bold">KEZPEZFOOD</a> -->
+    <!-- Navigation links (hidden by default) -->
+    <div id="myLinks">
+        <a href="home_page.html">home</a>
+        <a href="LA_pagination.php">los angeles</a>
+        <a href="korean.html">korean food</a>
+        <a href="cafes.html">cafes</a>
+    </div>
+
+    <!-- "Hamburger menu" / "Bar icon" to toggle the navigation links -->
+    <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+      <i class="fa fa-bars"></i>
+    </a>
+  </div>
+
+
+<div id="header" class="container-fluid">
+    <div class="row">
+        <h2 class="p-3 col-12">choose a category</h2>
+        <div class="word_slider">
+            <div class="left_header_word outlined-text" href="home_page.html">KEZPEZFOOD</div>
+            <div class="center_header_word" href="korean.html">KOREAN</div>
+            <div class="right_header_word outlined-text" href="cafes.html">COFFEE</div>
+        </div><!-- text slider -->
+    </div>
+</div>
+
+
+<!-- intro -->
+<div id="page-wrapper">
+
+
+<div id="fav_spots">
+    <h2 class="fav">Here are my favorite Korean restaurants!</h2>
+
+    <h3 class="fav">These are my favorite restaurants for KBBQ, comfort food, quick bites and more!</h3>
+    <div class="row">
+        <div class="col-12 col-lg-3 text-center full_card">
+            <h3 >Quick Bites</h3>
+            <div class="restaurant_card shadow-border">
+            <div class="image-container">
+                <img class="thumbnail" src="https://fastly.4sqi.net/img/general/600x600/62353342_0lyG5_K_H8CHvygP2La5ENAs-qlnrqCko07IetSZUiE.jpg" alt="coffee">
+               </div>
+                <p>Koreatown Plaza Food Court</p>
+                <p>★4/5</p>
+            </div>
+           
+        </div><!--restaurant_card-->
+        <div class="col-12 col-lg-3 text-center full_card">
+            <h3 class="name">Favorite Dessert</h3>
+
+            <div class="restaurant_card shadow-border">
+            <div class="image-container">
+                <img class="thumbnail" src="https://koreatownlosangeles.com/wp-content/uploads/2021/07/sulnbeans_192240621_177798404274700_1906421589917184556_n.jpg" alt="tacos">
+                <p>Sul & Beans</p>
+                <p>★4/5</p>
+            </div>
+        </div><!--restaurant_card-->
+        </div>
+        <div class="col-12 col-lg-3 text-center full_card">
+            <h3 class="name">Favorite KBBQ</h3>
+
+            <div class="restaurant_card shadow-border">
+            <div class="image-container">
+                <img class="thumbnail" src="https://img.particlenews.com/image.php?type=thumbnail_580x000&url=3BSF9F_0mRPNUOg00" alt="kbbq">
+                <p>Gangnam Station KBBQ</p>
+                <p>★5/5</p>
+            </div>
+        </div><!--restaurant_card-->
+    </div><!-- row -->
+    <div class="col-12 col-lg-3 text-center full_card">
+        <h3 class="name">Favorite Noodles</h3>
+
+        <div class="restaurant_card shadow-border">
+        <div class="image-container">
+            <img class="thumbnail" src="https://lh3.googleusercontent.com/p/AF1QipO3bKpMEy6me074B3Rk-CUh7k5s-wqQfu4hhyO_=w768-h768-n-o-v1" alt="japanese">
+            <p>Hanguri</p>
+            <p>★5/5</p>
+        </div>
+    </div><!--restaurant_card-->
+
+</div><!-- row -->
+
+
+    </div><!-- fav spots -->
+    <div id="container">
+        <hr class="hr" id="top"/>
+        <h1 id="best">THE BEST OF</h1>
+        <hr class="hr"id="bottom" />
+
+        <h2 class="category">KBBQs</h2>
+        <h3 class="name">1. Quality AYCE: Gangnam Station KBBQ</h3>
+        <div class="stretch-image-container">
+        <img class="restaurant_image" src="https://img.particlenews.com/image.php?type=thumbnail_580x000&url=3BSF9F_0mRPNUOg00" alt="kbbq">
+        <p class="text">This is the best quality All you can eat Korean BBQ! The wait is very long though but you can put your name on the yelp wait list in advance. I did wait 2 hours one time. The banchan is also loaded. It's AYCE and you can grab any banchan whenever you want. </p>
+    </div>
+    <h3 class="name">2. Cheap AYCE: Wi Korean BBQ & Meat Love</h3>
+    <div class="stretch-image-container">
+    <img class="restaurant_image" src="https://resizer.otstatic.com/v2/photos/xlarge/2/53430248.webp" alt="kbbq">
+    <p class="text">This is the best cheap AYCE Korean BBQ! As a college student I love eating AYCE with my friends but it's usually so expensive. This is the best affordable and budget friendly kbbq spot. Per person it's $25.  </p>
+</div>
+
+
+<h2 class="category" id="comfort-food">Comfort Food</h2>
+<h3 class="name">1. Hangari Kalguksu</h3>
+<div class="stretch-image-container">
+<img class="restaurant_image" src="https://static.wixstatic.com/media/635be5_7724ba11fe474e888f41add02df01fa2~mv2.jpg/v1/fill/w_640,h_538,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/635be5_7724ba11fe474e888f41add02df01fa2~mv2.jpg" alt="kbbq">
+<p class="text">This is my favorite restaurant in Ktown LA! The soup is so good and the bossam is delicious. The food always hits. </p>
+</div>
+<h3 class="name">2. Surawon</h3>
+<div class="stretch-image-container">
+<img class="restaurant_image" src="https://res.cloudinary.com/the-infatuation/image/upload/q_auto,f_auto/images/SurawonTofuHouse_wq8gac" alt="kbbq">
+<p class="text">This spot is so much better than BCD Tofu House. The soup is more authentic and the meat tastes so much better. The meat is super juicy.  </p>
+</div>
+
+    
+
+        
+
+
+    </ul>
+    <div class="clearfloat"></div>
+</div><!-- container -->
+
+</div><!--page wrapper-->
+
+
+<div id="footer" class="container-fluid">
+    <p>Kezia Leung's Interest and Hobbies</p>
+    <p>Socials: @kezpezfood</p>
+</div><!-- footer -->
+
+   
+<!-- SCRIPT -->
+    <script>
+/* Toggle between showing and hiding the navigation menu links when the user clicks on the hamburger menu / bar icon */
+function myFunction() {
+  var x = document.getElementById("myLinks");
+  if (x.style.display === "block") {
+    x.style.display = "none";
+  } else {
+    x.style.display = "block";
+  }
+}
+
+
+
+    </script>
+</body>
+</html>
